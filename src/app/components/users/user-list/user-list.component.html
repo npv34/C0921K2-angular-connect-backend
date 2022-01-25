@@ -1,0 +1,18 @@
+<button routerLink="add">Add new</button>
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let user of users; let i = index">
+    <td>{{ i + 1}}</td>
+    <td>{{ user?.name }}</td>
+    <td>{{ user?.email }}</td>
+    <td>
+      <button routerLink="{{user.id}}/update">Update</button>
+      <button (click)="delete(user.id)">Delete</button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+<form *ngIf="formAddUser" [formGroup]="formAddUser" (ngSubmit)="submit()">
+  Name:
+  <input type="text" formControlName="name" name="name">
+  Email:
+  <input type="email" formControlName="email" name="email">
+  Password:
+  <input type="password" formControlName="password" name="password">
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,7 @@
+<form *ngIf="formAddUpdate" [formGroup]="formAddUpdate" (ngSubmit)="submit()">
+  Name:
+  <input type="text" formControlName="name" name="name">
+  Email:
+  <input type="email" formControlName="email" name="email">
+  <button type="submit">Save</button>
+</form>
